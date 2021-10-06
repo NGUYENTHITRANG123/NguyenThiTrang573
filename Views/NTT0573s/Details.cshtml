@@ -1,0 +1,36 @@
+@model NguyenThiTrang573.Models.NTT0573
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>NTT0573</h4>
+    <hr />
+    <dl class="row">
+         <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.NTTId)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.NTTId)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.NTTName)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.NTTName)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.NTTGender)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.NTTGender)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.NTTId">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

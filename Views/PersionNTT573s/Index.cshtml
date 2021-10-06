@@ -1,0 +1,41 @@
+@model IEnumerable<NguyenThiTrang573.Models.PersionNTT573>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+             <th>
+                @Html.DisplayNameFor(model => model.PersionId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PersionName)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+             <td>
+                @Html.DisplayFor(modelItem => item.PersionId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PersionName)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.PersionId">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.PersionId">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.PersionId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

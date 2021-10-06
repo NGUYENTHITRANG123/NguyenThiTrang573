@@ -1,0 +1,47 @@
+@model IEnumerable<NguyenThiTrang573.Models.NTT0573>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.NTTId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NTTName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NTTGender)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+             <td>
+                @Html.DisplayFor(modelItem => item.NTTId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NTTName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NTTGender)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.NTTId">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.NTTId">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.NTTId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
